@@ -1,3 +1,8 @@
+"""Transformation von Daten.
+
+Aufgabenstellung: https://wiki.bzz.ch/modul/m323/learningunits/lu03/aufgaben/transformation
+"""
+
 def transform_employee_data():
     pass
 
