@@ -1,3 +1,8 @@
+"""Transformation von Daten.
+
+Aufgabenstellung: https://wiki.bzz.ch/modul/m323/learningunits/lu03/aufgaben/transformation
+"""
+
 def transform_employee_data(employees, transformation_function, *args):
     """
     Higher-Order function that accepts a list of employees and a transformation function.
@@ -57,7 +62,7 @@ def convert_names_to_uppercase(employees):
 
 
 if __name__ == '__main__':
-    employees = [
+    demo_employees = [
         {'name': 'Alice', 'age': 30, 'salary': 5000, 'department': 'HR'},
         {'name': 'Bob', 'age': 40, 'salary': 6000, 'department': 'IT'},
         {'name': 'Charlie', 'age': 25, 'salary': 4000, 'department': 'Sales'},
@@ -72,16 +77,16 @@ if __name__ == '__main__':
 
     # Test: Increasing salary in the IT department by 10%
     updated_employees = transform_employee_data(
-        employees, increase_salary_by_department, 'IT', 10
+        demo_employees, increase_salary_by_department, 'IT', 10
     )
     print(updated_employees)
 
     # Test: Filtering employees older than 35
-    older_employees = transform_employee_data(employees, filter_by_age, 35, 'greater')
+    older_employees = transform_employee_data(demo_employees, filter_by_age, 35, 'greater')
     print(older_employees)
 
     # Test: Converting names to uppercase
     uppercase_names_employees = transform_employee_data(
-        employees, convert_names_to_uppercase
+        demo_employees, convert_names_to_uppercase
     )
     print(uppercase_names_employees)
